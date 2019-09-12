@@ -13,8 +13,6 @@ notifications:
     on_failure: always # default: always (which is annoying, as it should be)
 install:
   - npm ci # faster, goes only from package-lock
-before_script:
-  - psql -c 'create database "deployment-exercise-test";' -U postgres # remember to change this name if you change it elsewhere (e.g. package.json)
 before_deploy: # omit node_modules, since we set skip_cleanup below
   - rm -rf node_modules
 deploy: # see README for details on these keys
@@ -25,4 +23,4 @@ deploy: # see README for details on these keys
   app: fsa-deploy-workshop
   # the secure key indicates an encrypted value; see README
   api_key:
-    secure: j87XZy0y+OdPhAGxlaMmplQ8Y5VjcaSsza1GAGd0mDnE10tijJxDAcG4xq5RCgFscHU+SeeVIQfBRPsl7nDRFeRESPNV1xJFwK4/Wsl0b5Np/k1wbgVZtTnOO1Oswb4iSKNm9M2nbE+SQLFfb7D5/HwrkO3fY9wWHVfJ/jKnkYoVFJLG/8dpK4ituAvQNJew/duftMYYGFsu5llntDRHnbLTJbEG6IPbfd+ufvYrN0ssQb0NeaRtq6a6hrR1TypDuRHHoogMxtyBiLWPoqvSrTiqKDIosrc2ePJoOZ5bIQH6xa+hsTfADQ7Wz5heZPZmta9jvvWgQEgwUI8zYiaHgyzlvzkW/TDtPQvN2IUQCt2enp/jFQck3Ziwzlx8EbHSeUWHPVYSe4DU0FmB47DSDAvgbKWVPORELhS95HhluKEe4g54vnFWLU2U0O/KFVWYoTZX3odlACgiIosJ9TCfRCn8xRaVVTPTHxZHI9sfKMGOATg38SjcYgxQTtHjWe2+X3chr/7E2ooIl8963/DDwE94dWTUiStvwzJXqkOREGUNUTZNBcwm5Mws5bCeEF5V9pko5tmhq7pFrz3haNVCkgpRjyrpGEO7bnu/d4OCCpYO+Hy/0wPXIx9NSRE0Wx0x3toNJZGZ+hWUHbpjFh7hvgj9+IhWPRNtc83E1Tr1CKs=
+    secure: QBQyayXKgWm4qZ7vBtrhwgSzLhq1Ay07dc1jJ0fwTZKoyxqYsEs9kEY73t043c3ROc24bXP2fTaGtWIjglDGS12LbIrrAfqbUwf9rZWeTdPdVrrz1WTyxQfb+/pJ6qVuMvv99J6asdhy/5D+sWXwIeb8Lq8x8dZrBz62w/hlopdCZUcnQqKeR/lFckBn439d+fLKVjrZD/40MW3c5+LRjzzYzpYO31DIk+8a/R+s5FUYKAM9D1yhMkr7p4Me9qK0xgTQkKFPgx+DD/e2ZoZfyUmUpYjVHSMnCQGvhD7dACbyjuD5xdF54thSq+oehEDAH7Y3KnLMEOIhZ8rxue3Vf2jsCYBp1C3GqqESSfBmH0JVpg+SRX/Jh6N9IU5HQrGfHAfIUr/mMHf//UxrvIvfJOrBS0C66uE8N9Fh0CWl7izvkNboIj58QdNKpf9w6Y7zSs9OVVFOQyPYWpczW1stlDbj4YB+RybtwCK/ZzVFRkxwZQCDxtHL1WYMiPaLQFLs8dps7S1/ELjDtAGdrGEfmlHcZnVpLD7rdFDvNUo9gKO5Jfcp7O2bc8mycbLy6g6cQWXEfygzs6m4DQfLPmf5+ai/Q8wDwCRIn1GG23fAv895rE7RshLyS2Qz3zPCW3BgzLr0Fn6AYIHo5nJ5Ib+RS0FK8hj3Irk+huwurLhEqbg=

@@ -57,7 +57,7 @@ const getOutputFromCommand = async (command, args) => {
     });
 
     process.on('close', code => {
-      //if (code) throw new Error(reject(stderr));
+      if (code) throw new Error(reject(stderr));
       resolve(stdout);
     });
   });
@@ -128,6 +128,8 @@ const main = async () => {
   const { fullName, appName } = await getNamesFromGit();
 
   /* Get Heroku authentication token from the Heroku CLI. */
+  // there seems to be an issue with heroku auth:token on ubuntu, so i hardcoded my auth token here,
+  // ran this script and removed the token before committing
   const herokuTokenOut = await getOutputFromCommand('heroku', ['auth:token']);
   const herokuTokenStr = herokuTokenOut.toString('utf-8');
   const herokuToken = herokuTokenStr.slice(0, herokuTokenStr.length - 1);
