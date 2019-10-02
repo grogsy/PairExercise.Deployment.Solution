@@ -5,17 +5,17 @@ const PORT = process.env.PORT || 3000;
 const path = require('path');
 const db = require('./db');
 
-const router = express.Router()
+const router = express.Router();
 
-router.get('/' async (req, res, next) => {
+router.get('/', async (req, res, next) => {
   try {
-    res.send('subdomain get')
+    res.send('subdomain get');
   } catch (error) {
-    next(error)
+    next(error);
   }
-})
+});
 
-app.use(subdomain('foo', router))
+app.use(subdomain('foo', router));
 
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
