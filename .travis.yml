@@ -26,5 +26,6 @@ deploy: # see README for details on these keys
   # app should be your heroku app name; see README
   app: fsa-deploy-workshop
   # the secure key indicates an encrypted value; see README
+  # to get a secure key, do travis encrypt $(heroku auth:token)
   api_key:
     secure: fLUJnDoZFX/Hd9tSkN8X/XpaTch62+BLLzvo40KHE9fSVyTN2nCmft035TXbNS9onrE6LRqKDtFW2sU5lZe3xgTn8j9JAaIoZQ0nEGjtczPOirEbxCjnlEk1WHalSKwYhD3rnW3+ZGBiuHQITKVXVXVABYMsyFfNhGCDS600sAoDjaRkG29BBYhpp9mVS46bcNkc9CCeRVKXDXlxFf7MA+3etM7Tv1rsYlXUuTsLOeFh/HG22VZWi3EBNfT+FEN81E5afloYAg71tg0Ej/lXSxDKpdVpJpyL7+KnOU8czsHSjmBlu9uJ+6qnVCPfTNNVhFXnFgc+Cjd1rEnfGBnS6HCd2kKe5BWgEg0gKEAVRUTh2zO/wG5DkgDi8vHEiZxtsMh7eDiflaE5vivmRnsV+7VOn56AYh3LR0jDLJrhc9oGIq+jPGLmYP7utlEY5OSvqP2+BOM/ht9o8SGXyEKKzLUqYlTonOnwtYVSRB9jhHQhYBuHb6ARBfHLUaL48rvYMNlL7fU7eN5Au9MszcVu3NobgqvrxIlvLNY2T0WPFN3WtSK+SnR2pvrZ6qjV3R8wzvRen+KJRyxJEfekxMCPfg/SsPbq9XWglgGTrrVz3ThzrlHVL1E5YeeUui7R0QZBOcr+Hj0Umt+Yp0c1RZqzQtpHAfPFxCAgiYpq6CegjX8= 
